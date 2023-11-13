@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - npm install -g yarn
+      - yarn
+      - npm run build
+      - npm run test -- --coverage --watchAll=false --testResultsProcessor="jest-junit"
+artifacts:
+  name: "build-output"
+  files:
+    - "**/*"
+reports:
+  test-report:
+    files:
+      - 'junit.xml'
+    file-format: 'JUNITXML'
+  coverage-report:
+    files:
+      - 'coverage/clover.xml'
+    file-format: 'CLOVERXML'

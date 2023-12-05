@@ -4,6 +4,9 @@ phases:
     commands:
       - npm install -g yarn
       - yarn
+  post_build:
+    commands:
+      - echo "Release_ID"
 artifacts:
   name: "build-output"
   files:

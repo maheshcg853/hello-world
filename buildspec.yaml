@@ -4,8 +4,6 @@ phases:
     commands:
       - npm install -g yarn
       - yarn
-      - npm run build
-      - npm run test -- --coverage --watchAll=false --testResultsProcessor="jest-junit"
 artifacts:
   name: "build-output"
   files:

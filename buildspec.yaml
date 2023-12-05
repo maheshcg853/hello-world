@@ -6,7 +6,7 @@ phases:
       - yarn
   post_build:
     commands:
-      - echo "Release_ID"
+      - echo "$Release_ID"
 artifacts:
   name: "build-output"
   files:

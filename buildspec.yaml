@@ -7,6 +7,7 @@ phases:
   post_build:
     commands:
       - echo "$Release_ID"
+      - echo $CUSTOM_VAR1
 artifacts:
   name: "build-output"
   files:

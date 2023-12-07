@@ -6,7 +6,7 @@ phases:
       - yarn
   post_build:
     commands:
-      - echo "$EXEC_ID"
+      - echo "#{codepipeline.PipelineExecutionId}"
       - echo $CUSTOM_VAR1
 artifacts:
   name: "build-output"

@@ -1,13 +1,9 @@
 version: 0.2
 phases:
-  install:
-    runtime-versions:
-      nodejs: 16
+  
   build:
     commands:
       - node --version
-      - cd EMMI-Angular/
-      - npm install --force && npm install -g @angular/cli@"v16-lts"
       - npm install -g yarn
       - yarn
   post_build:

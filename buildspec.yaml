@@ -6,7 +6,7 @@ phases:
       - node --version
       - npm install -g yarn
       - yarn
-      -mvn clean install
+      - mvn clean install
   post_build:
     commands:
       - echo "#{codepipeline.PipelineExecutionId}"

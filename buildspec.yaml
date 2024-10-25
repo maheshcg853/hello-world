@@ -8,6 +8,9 @@ phases:
      # - npm install -g yarn
      # - yarn
      # - mvn clean install
+  build:
+    commands:
+       - echo "Hello World BUILD!"
   post_build:
     commands:
         - echo "Hello World POSTBUILD!"

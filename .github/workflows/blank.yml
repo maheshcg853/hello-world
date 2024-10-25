@@ -7,7 +7,3 @@ jobs:
       - buildspec-override:true
     steps:
       - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!"
-      - run: node --version
-      - run: npm install -g yarn
-      - run: yarn
-      - run: mvn clean install

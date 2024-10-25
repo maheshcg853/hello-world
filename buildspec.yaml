@@ -3,14 +3,16 @@ phases:
   
   pre_build:
     commands:
-      - node --version
-      - npm install -g yarn
-      - yarn
-      - mvn clean install
+       - echo "Hello World PREBUILD!"
+     # - node --version
+     # - npm install -g yarn
+     # - yarn
+     # - mvn clean install
   post_build:
     commands:
-      - echo "#{codepipeline.PipelineExecutionId}"
-      - echo $CUSTOM_VAR1
+        - echo "Hello World POSTBUILD!"
+      # - echo "#{codepipeline.PipelineExecutionId}"
+      # - echo $CUSTOM_VAR1
 artifacts:
   name: "build-output"
   files:

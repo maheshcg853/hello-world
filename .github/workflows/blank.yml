@@ -6,9 +6,8 @@ jobs:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - buildspec-override:true
     steps:
-      - run: |
-          echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!"
-          node --version
-          npm install -g yarn
-          yarn
-          mvn clean install
+      - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!"
+      - run: node --version
+      - run: npm install -g yarn
+      - run: yarn
+      - run: mvn clean install

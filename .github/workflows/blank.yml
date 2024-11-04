@@ -13,7 +13,7 @@ jobs:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
       - name: Test
-        run: echo "hello world"
+        run: echo "hello world hearn"
 
   hern-two:
     runs-on:

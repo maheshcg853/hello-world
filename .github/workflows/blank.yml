@@ -7,3 +7,25 @@ jobs:
       - buildspec-override:true
     steps:
       - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!"
+      
+  hern-test:
+    runs-on:
+      - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - name: Test
+        run: echo "hello world"
+
+  hern-two:
+    runs-on:
+      - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
+      - image:linux-lambda-nodejs20
+      - instance-size:4GB
+    steps:
+      - name: Test
+        run: echo "hello world" && sleep 10
+
+  pr-build-ui:
+    runs-on:
+      - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
+      - image:linux-lambda-nodejs20
+      - instance-size:8GB

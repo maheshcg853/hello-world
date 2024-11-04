@@ -22,7 +22,7 @@ jobs:
       - instance-size:4GB
     steps:
       - name: Test
-        run: echo "hello world" && sleep 10
+        run: echo "hello world hearn" && sleep 10
 
   pr-build-ui:
     runs-on:

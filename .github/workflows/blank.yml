@@ -29,3 +29,6 @@ jobs:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - image:linux-lambda-nodejs20
       - instance-size:8GB
+    steps:
+      - name: Test
+        run: echo "hello world pr-build-ui"

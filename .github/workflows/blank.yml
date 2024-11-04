@@ -6,7 +6,7 @@ jobs:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - buildspec-override:true
     steps:
-      - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!"
+      - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!!!!"
       
   hern-test:
     runs-on:

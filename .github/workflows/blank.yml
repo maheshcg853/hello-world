@@ -5,16 +5,16 @@ jobs:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - buildspec-override:true
-      - image:linux-lambda-nodejs20
-      - instance-size:1GB
+      - image:linux-5.0
+      - instance-size:small
     steps:
       - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNER!!!!"
       
   hern-test:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
-      - image:linux-lambda-nodejs20
-      #- instance-size:2GB
+      #- image:linux-5.0
+      #- instance-size:small
     steps:
       - name: Test
         run: echo "hello world hearn"
@@ -22,8 +22,8 @@ jobs:
   hern-two:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
-      - image:arm-lambda-nodejs20
-      - instance-size:4GB
+      - image:linux-5.0
+      #- instance-size:small
     steps:
       - name: Test
         run: echo "hello world hearn" && sleep 10
@@ -32,8 +32,8 @@ jobs:
   pr-build-ui:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
-      - image:linux-5.0
-      - instance-size:small
+      - image:linux-lambda-nodejs20
+      - instance-size:2gb
     steps:
       - name: Test
         run: echo "hello world pr-build-ui"

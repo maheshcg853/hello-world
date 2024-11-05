@@ -14,7 +14,7 @@ jobs:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - image:linux-lambda-nodejs20
-      - instance-size:2GB
+      #- instance-size:2GB
     steps:
       - name: Test
         run: echo "hello world hearn"

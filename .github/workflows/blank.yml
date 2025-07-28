@@ -13,8 +13,8 @@ jobs:
   hern-test:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
-      #- image:linux-5.0
-      #- instance-size:small
+      - image:linux-5.0
+      - instance-size:small
     steps:
       - name: Test
         run: echo "hello world hearn"
@@ -23,17 +23,17 @@ jobs:
     runs-on:
       - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
       - image:linux-5.0
-      #- instance-size:small
+      - instance-size:small
     steps:
       - name: Test
         run: echo "hello world hearn" && sleep 10
       
 
-  pr-build-ui:
-    runs-on:
-      - codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
-      - image:linux-lambda-nodejs20
-      - instance-size:2gb
-    steps:
-      - name: Test
-        run: echo "hello world pr-build-ui"
+  #pr-build-ui:
+    #runs-on:
+      #- codebuild-TestGitHubActions-${{ github.run_id }}-${{ github.run_attempt }}
+      #- image:linux-lambda-nodejs20
+      #- instance-size:2gb
+    #steps:
+      #- name: Test
+        #run: echo "hello world pr-build-ui"

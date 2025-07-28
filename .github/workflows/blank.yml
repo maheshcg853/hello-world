@@ -8,7 +8,7 @@ jobs:
       - image:linux-5.0
       - instance-size:small
     steps:
-      - run: echo "Hello World BUILD FROM SELF-HOST GITHUB ACTIONS RUNNERsss!!!!"
+      - run: echo "Hello World Mahesh BUILD FROM SELF-HOST GITHUB ACTIONS RUNNERsss!!!!"
       
   hern-test:
     runs-on:
